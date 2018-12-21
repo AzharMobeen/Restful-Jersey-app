@@ -20,3 +20,9 @@ In web.xml you have to mention you jersey Resources package For Jersey Servlet.
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 
+2) Configure any Application server and run.
+
+3) Hit url 
+	
+	http://localhost:port/restful-jersey-app/myresource
+	
