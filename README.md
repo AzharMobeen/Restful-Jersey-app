@@ -4,7 +4,7 @@ It's a simple Restful WS with Jersey implementation for beginners.
 
 Important Steps:
 
-In web.xml you have to mention you jersey Resources package For Jersey Servlet.
+1) In web.xml you have to mention you jersey Resources package For Jersey Servlet.
  
 	<servlet>
         <servlet-name>Jersey Web Application</servlet-name>
@@ -22,7 +22,25 @@ In web.xml you have to mention you jersey Resources package For Jersey Servlet.
 
 2) Configure any Application server and run.
 
-3) Hit url 
+3) Please check these urls: (please set IP and port if different)
 	
-	http://localhost:port/restful-jersey-app/myresource
+	http://localhost:port/restful-jersey-app/myresource	
+
+For XML Producer 
+
+	http://localhost:8080/restful-jersey-app/userResource/usetList
+
+For JSON Producer
+ 	
+	http://localhost:8080/restful-jersey-app/userResource/usetList_JSON
+
+# Notes:
+1) For xml return type/Producer we have to declare root element (Please check User class and getUserList method) and we have to use MediaType AS XML
+	
+	@XmlRootElement
+	@Produces(MediaType.APPLICATION_XML)
+	
+2) For JSON return type/Producer use only 
+
+	@Produces(MediaType.APPLICATION_JSON)	  
 	
